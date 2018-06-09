@@ -1,0 +1,74 @@
+<html>
+	<head>
+		<title>Acordeón</title>
+		<style type="text/css">
+			body {
+				padding-top: 100px;
+				font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+				font-size: 1rem;
+				font-weight: 400;
+				line-height: 1.5;
+				color: #212529;
+				text-align: left;
+				background-color: #fff;
+			}
+			.contenido{
+				display: none;
+				-ms-flex: 1 1 auto;
+				flex: 1 1 auto;
+				padding: 1.25rem;
+			}
+			.acordeon{
+				position: relative;
+				display: -ms-flexbox;
+				display: flex;
+				-ms-flex-direction: column;
+				flex-direction: column;
+				min-width: 0;
+				max-width: 600px;
+				margin-left: auto;
+				margin-right: auto;
+				word-wrap: break-word;
+				background-color: #fff;
+				background-clip: border-box;
+				border: 1px solid rgba(0, 0, 0, 0.125);
+				border-radius: 0.25rem;
+			}
+			.titulo{
+				padding: 0.75rem 1.25rem;
+				margin-bottom: 0;
+				background-color: rgba(0, 0, 0, 0.03);
+				border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+			}
+		</style>
+	</head>
+	<body>
+
+		<center><h1>Acordeón</h1></center>
+
+		<div class="acordeon">
+			<div class="titulo" onclick="Titulo(this);">Titulo 1 </div>
+			<div class="contenido">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
+			<div class="titulo" onclick="Titulo(this);">Titulo 2 </div>
+			<div class="contenido">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
+			<div class="titulo" onclick="Titulo(this);">Titulo 3 </div>
+			<div class="contenido">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
+		</div>
+
+		<script src="jquery.min.js"></script>
+		<script type="text/javascript">
+			function Titulo(_elemento){
+				if($(_elemento).next().hasClass('activo')){
+					$(_elemento).next().hide();
+					$(_elemento).next().removeClass('activo');
+				}
+				else{
+					$('.contenido').hide();
+					$('.contenido').removeClass('activo');
+					$(_elemento).next().show();
+					$(_elemento).next().addClass('activo');
+				}
+			}
+		</script>
+	</body>
+</html>
